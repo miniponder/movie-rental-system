@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ```
 
 #### 4. configure environment variables
-create is a `.env` file in the root dierectory to store sensitive information such as email credentials, secret key, etc.
+create a `.env` file in the root dierectory to store sensitive information such as email credentials, secret key, etc.
 
 #### 5. run the application
 ```
