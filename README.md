@@ -30,10 +30,10 @@ as the title suggests, this is a web application for managing movie rentals, wit
 ![view](screenshots/view.png)
 #### 5. rentals page
 ![rentals](screenshots/customer.png)
-#### 6. manager login page
-![manager login](screenshots/manager-login.png)
-#### 7. staff login page
+#### 6. staff login page
 ![staff login](screenshots/staff-login.png)
+#### 7. manager login page
+![manager login](screenshots/manager-login.png)
 
 
 ### setup instructions:
