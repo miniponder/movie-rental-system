@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>staff login - movie rental system</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/auth/staff-login.css') }}">
+  <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+</head>
+{% block body %}
+<body>
+<form action="/staff-login" method="POST">
+  <h2>staff login</h2>
+  {% if warn=="y" %}
+  <h4>invalid credentials</h4>
+  {% endif %}
+  <input type="text" id="username" name="username" placeholder="username" required>
+  <input type="email" id="email" name="email" placeholder="email">
+  <input type="password" id="password" name="password" placeholder="password" required>
+  <input type="submit" value="log in">
+  <a href="{{ url_for('customer.create_acc') }}" class="btn">create account</a>
+  <a href="{{url_for('auth.login')}}" class="btn-b">user?</a>
+</form>
+</body>
+{% endblock %}
+</html>

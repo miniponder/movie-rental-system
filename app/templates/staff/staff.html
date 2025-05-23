@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>customer list - movie rental system</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/staff/staff.css') }}">
+  <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+</head>
+
+<body>
+  {% block body %}
+  <div class="header">
+    <div class="left">
+      <div class="dropdown">
+        <button class="dropdown-item">menu &#9662;</button>
+        <div class="dropdown-content">
+          <a href="{{ url_for('auth.login') }}">logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <h1>customer list</h1>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>returning date</th>
+        <th>title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in range(0, length) %}
+      <tr>
+        <td>{{ uname[i] }}</td>
+        <td>{{ uemail[i] }}</td>
+        <td>{{ deadline[i] }}</td>
+        <td>{{ titles[i] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="notification-form">
+    <h2>send emails</h2>
+    <form action="/send-mail" method="post">
+      <label for="recipients">recipients (comma-separated list of usernames)</label>
+      <textarea id="recipients" name="recipients"></textarea>
+
+      <input type="radio" id="User" name="allusers" value="User">
+      <label for="User">all users</label>
+
+      <label for="message">message</label>
+      <textarea id="message" name="message"></textarea>
+
+      <input type="submit" class="button-style" value="send">
+    </form>
+  </div>
+  {% endblock %}
+</body>
+</html>

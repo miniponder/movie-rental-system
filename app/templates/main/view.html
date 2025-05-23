@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}} - movie rental system</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main/view.css') }}">
+  <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+</head>
+
+{% block body %}
+<body>
+  <div class="header">
+        <div class="dropdown">
+      <div class="dropdown-content">
+        <a href="{{url_for('customer.customer')}}">check status</a>
+        <a href="{{url_for('auth.login')}}">logout</a>
+      </div>
+      <button class="dropdown-item">menu &#9662;</button>
+    </div>
+    <h1>{{ title }}</h1>
+    <div class="search-container">
+      <form action="/search" method="POST">
+        <div class="search">
+          <input type="text" name="inp" placeholder="enter movie name">
+          <button type="submit">search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="movie-container">
+    <div class="movie">
+      <img src="{{ posterpath }}" alt="{{ title }} poster"  width="150px" height="250px">
+      <div class="details">
+        <h2>{{ title }}</h2>
+        <p><b>overview:</b> {{ overview }}</p>
+        <p><b>price:</b> {{ price }}</p>
+        <p><b>genre:</b> {{  genre }}</p> 
+        <p><b>rating:</b> {{ rating }} / 5</p>
+        <p><b>stock:</b> {{ stock }}</p>
+        <form action="{{url_for('main.view', title=title)}}" method="POST">
+          <input type="submit" value="rent movie">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
+</html>

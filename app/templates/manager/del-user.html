@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Manager</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/manager/del-user.css') }}">
+  <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+</head>
+
+{% block body %}
+<body>
+    <div class="header">
+    <div class="left">
+      <div class="dropdown">
+        <button class="dropdown-item">menu &#9662;</button>
+        <div class="dropdown-content">
+          <a href="{{url_for('manager.total_orders')}}">check status</a>
+	  <a href="{{url_for('auth.login')}}">logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+     <h1>movie manager</h1>
+    </div>
+  </div>
+	<form action="/del-user" method="POST">
+		{% if message %}
+  <div style="margin-top: 20px; color: green; font-weight: bold;">
+    {{ message }}
+  </div>
+  {% endif %}
+<label for="username">username:</label>
+            <input type="text" id="username" name="username" required>
+<fieldset>
+  <legend>select a role:</legend>
+  <div class="radio-group">
+    <div>
+      <input type="radio" id="User" name="user_cat" value="User" checked>
+      <label for="User">user</label>
+    </div>
+    <div>
+      <input type="radio" id="Staff" name="user_cat" value="Staff">
+      <label for="Staff">staff</label>
+    </div>
+    <input type="submit" value="update">
+  </div>
+</fieldset>
+<a href="{{ url_for('manager.manager') }}">add or update movies</a>
+</form>
+</body>
+{% endblock %}
+</html>

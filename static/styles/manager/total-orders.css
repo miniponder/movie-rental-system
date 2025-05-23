@@ -1,0 +1,98 @@
+html {
+font-size       : 20px;
+font-family     : 'Helvetica Neue', sans-serif;
+background-image: url('../../images/manager/manager-background.jpg');
+background-size : cover;
+background-color: #E2E5E4;
+}
+
+body {
+background-size: cover;
+font-family    : 'Helvetica Neue', sans-serif;
+display        : flex;
+flex-direction : column;
+min-height     : 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px 30px;
+  background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.dropdown-item,
+.dropdown-content a {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #000000;
+  border-radius: 80px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.dropdown-item:hover,
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.movie {
+  border: 1px solid #000;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-deadline {
+  font-style: italic;
+  margin-bottom: 5px;
+}

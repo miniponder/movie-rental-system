@@ -1,0 +1,186 @@
+html {
+font-size       : 20px;
+font-family     : 'Helvetica Neue', sans-serif;
+background-image: url('../../images/manager/manager-background.jpg');
+background-size : cover;
+background-color: #EDEDED;
+}
+
+body {
+background-size: cover;
+font-family    : 'Helvetica Neue', sans-serif;
+display        : flex;
+flex-direction : column;
+min-height     : 100vh;
+}
+
+.header {
+display         : flex;
+align-items     : center;
+justify-content : space-between;
+gap             : 40px;
+padding         : 10px 30px;
+background-color: transparent;
+position        : relative;
+}
+
+.dropdown {
+position: relative;
+display : inline-flex;
+}
+
+.dropdown-content {
+display         : none;
+position        : absolute;
+top             : 100%;
+left            : 0;
+background-color: white;
+min-width       : 160px;
+z-index         : 1;
+border-radius   : 10px;
+box-shadow      : 0 8px 16px rgba(0, 0, 0, 0.2);
+padding         : 0;
+}
+
+.center {
+position : absolute;
+left     : 50%;
+transform: translateX(-50%);
+}
+
+.left {
+flex: 1;
+}
+.dropdown:hover .dropdown-content {
+display         : flex;
+flex-direction  : column;
+background-color: transparent;
+}
+
+.dropdown-content a,
+.dropdown-item {
+background-color: transparent;
+color           : black;
+border          : 1px solid #000000;
+border-radius   : 80px;
+padding         : 10px 20px;
+font-size       : 15px;
+cursor          : pointer;
+width           : 150px;
+text-decoration : none;
+text-align      : center;
+display         : block;
+margin          : 10px auto;
+box-sizing      : border-box;
+}
+
+.dropdown-content a:hover,
+.dropdown-item:hover {
+background-color: black;
+color           : white;
+}
+
+
+form {
+display       : flex;
+flex-direction: column;
+align-items   : center;
+margin-bottom : 50px;
+}
+
+.result {
+display              : grid;
+grid-template-columns: repeat(2, 1fr);
+gap                  : 40px 50px;
+padding              : 20px;
+max-width            : 800px;
+margin               : 50px auto 0 auto;
+}
+
+.form-pair {
+display       : flex;
+flex-direction: column;
+}
+
+.form-pair label {
+font-size    : 16px;
+font-weight  : bold;
+color        : #333;
+margin-bottom: 5px;
+}
+
+.form-pair input[type="text"] {
+background-color: transparent;
+border          : 1px solid #000000;
+border-radius   : 80px;
+padding         : 10px 20px;
+width           : 100%;
+font-size       : 15px;
+}
+
+input[type="submit"] {
+grid-column     : span 2;
+background-color: #000000;
+color           : #FFFFFF;
+border          : none;
+border-radius   : 80px;
+padding         : 10px 20px;
+cursor          : pointer;
+font-size       : 15px;
+width           : 30%;
+justify-self    : center;
+text-align      : center;
+}
+
+fieldset {
+grid-column  : span 2;
+border       : none;
+margin-bottom: 10px;
+font-size    : 20px;
+text-align   : center;
+}
+
+legend {
+text-align  : center;
+font-size   : 15px;
+font-weight : bold;
+font-stretch: ultra-expanded;
+}
+
+.radio-group {
+margin-top     : 20px;
+display        : flex;
+justify-content: center;
+gap            : 20px;
+flex-wrap      : wrap;
+}
+
+.radio-group input[type="radio"] {
+opacity : 0;
+position: absolute;
+}
+
+.radio-group label {
+position    : relative;
+padding-left: 25px;
+cursor      : pointer;
+font-size   : 15px;
+font-stretch: ultra-expanded;
+}
+
+.radio-group label::before {
+content         : '';
+position        : absolute;
+left            : 0;
+top             : 1px;
+width           : 16px;
+height          : 16px;
+border-radius   : 50%;
+border          : 2px solid #CCCCCC;
+background-color: transparent;
+}
+
+.radio-group input[type="radio"]:checked + label::before {
+background-color: #000000;
+border-color    : #CCCCCC;
+}

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+ENV/
+.env
+db.sqlite3
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.egg-info/
+.eggs/
+*.egg

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>welcome manager - movie rental system</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/manager/manager.css') }}">
+	<link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+</head>
+
+{% block body %}
+<body>
+	<div class="header">
+		<div class="left">
+			<div class="dropdown">
+				<button class="dropdown-item">menu &#9662;</button>
+				<div class="dropdown-content">
+					<a href="{{url_for('manager.total_orders')}}">check status</a>
+					<a href="{{ url_for('manager.del_user') }}">delete users</a>
+					<a href="{{url_for('auth.login')}}">logout</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="center">
+			<h1>welcome manager</h1>
+		</div>
+	</div>
+	<form action="/manager" method="POST">
+		<div class="result">
+			<div class="form-pair">
+				<label for="movieName">movie title:</label>
+				<input type="text" id="movieName" name="movieName" required>
+			</div>
+			<div class="form-pair">
+				<label for="overview">overview:</label>
+				<input type="text" id="overview" name="overview">
+			</div>
+			<div class="form-pair">
+				<label for="stock">update stock:</label>
+				<input type="text" id="stock" name="stock">
+			</div>
+			<div class="form-pair">
+				<label for="rating">rating:</label>
+				<input type="text" id="rating" name="rating">
+			</div>
+			<div class="form-pair">
+				<label for="price">price:</label>
+				<input type="text" id="price" name="price">
+			</div>
+			<div class="form-pair">
+				<label for="year">year:</label>
+				<input type="text" id="year" name="year">
+			</div>
+			<div class="form-pair">
+				<label for="posterpath">poster path:</label>
+				<input type="text" id="posterpath" name="posterpath">
+			</div>
+
+			<fieldset>
+				<legend>genre:</legend>
+				<div class="radio-group">
+					<div>
+						<input type="radio" id="comedy" name="user_cat" value="comedy">
+						<label for="comedy">comedy</label>
+					</div>
+					<div>
+						<input type="radio" id="drama" name="user_cat" value="drama">
+						<label for="drama">drama</label>
+					</div>
+					<div>
+						<input type="radio" id="horror" name="user_cat" value="horror">
+						<label for="horror">horror</label>
+					</div>
+					<div>
+						<input type="radio" id="sci-fi" name="user_cat" value="sci-fi">
+						<label for="sci-fi">sci-fi</label>
+					</div>
+					<div>
+						<input type="radio" id="action" name="user_cat" value="action">
+						<label for="action">action</label>
+					</div>
+				</div>
+			</fieldset>
+
+			<input type="submit" value="update">
+		</div>
+	</form></body>
+	{% endblock %}
+</html>

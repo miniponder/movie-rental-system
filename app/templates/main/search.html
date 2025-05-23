@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>movies</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/main/search.css') }}">
+  <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
+</head>
+{% block body %}
+<body>
+<div class="header">
+    <div class="dropdown">
+    <button class="dropdown-item">menu ▼</button>
+    <div class="dropdown-content">
+      <a href="{{url_for('customer.customer')}}">check status</a>
+      <a href="{{url_for('auth.login')}}">logout</a>
+    </div>
+  </div>
+  <h1>welcome {{user}}</h1>
+  <form action="/search" method="POST" class="search">
+    <input type="text" name="inp" placeholder="enter movie name">
+    <button type="submit">search</button>
+  </form>
+</div>
+    {% if input!="" %}
+    <b>search results for {{ input }}:</b> 
+    {% endif %}
+    <div class="container">
+      <div class="movie">
+        <a href="{{url_for('main.view', title=input)}}"><img src="{{ inplink }}" alt={{movie_links[i]}} width="150px" height="250px"></a>
+        <p><b>{{ input }}</b></p>
+      </div>
+        {% for i in range(0, length) %}
+            <div class="movie">
+              <a href="{{url_for('main.view', title=movie_titles[i])}}"><img src="{{ movie_links[i] }}" alt={{movie_links[i]}} width="150px" height="250px"></a>
+              <p><b>{{ movie_titles[i] }}</b></p>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+{% endblock %}
+</html>

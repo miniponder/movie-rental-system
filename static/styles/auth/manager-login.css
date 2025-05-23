@@ -1,0 +1,92 @@
+html {
+font-size       : 20px;
+font-family     : 'Helvetica Neue', sans-serif;
+background-image: url('../../images/auth/manager-login-background.jpg');
+background-size : cover;
+background-color: #013353;
+}
+
+body {
+background-size: cover;
+font-family    : 'Helvetica Neue', sans-serif;
+display        : flex;
+min-height     : 100vh;
+}
+
+form {
+background-color: transparent;
+padding         : 70px 20px 20px 20px;
+width           : 500px;
+height          : 800px;
+justify-content : flex-start;
+align-items     : flex-start;
+margin-left     : 10%;
+margin-top      : 20px;
+margin-bottom   : 20px;
+}
+
+h2 {
+text-align : center;
+font-family: 'Helvetica Neue', sans-serif;
+font-size  : 45px;
+font-weight: lighter;
+color      : white;
+}
+
+input[type="password"]{
+background-color: transparent;
+border          : 1px solid #ffffff;
+border-radius   : 80px;
+padding         : 10px 20px;
+width           : 50%;
+display         : block;
+margin          : 20px auto;
+font-size       : 15px;
+}
+
+
+input[type="submit"] {
+background-color: white;
+border          : 1px solid #ffffff;
+border-radius   : 80px;
+padding         : 10px 20px;
+cursor          : pointer;
+font-size       : 15px;
+width           : 28%;
+margin-left     : 35.5%;
+color           : black;
+text-align      : center;
+margin-bottom: 30px;
+}
+input[type="submit"]:hover {
+background-color: #fff;
+color           : black;
+}
+
+.btn {
+background-color: transparent;
+border          : 1px solid #ffffff;
+border-radius   : 80px;
+padding         : 10px 20px;
+cursor          : pointer;
+font-size       : 15px;
+width           : 28%;
+text-decoration : none;
+margin-left     : 41%;
+color           : white;
+text-align      : center;
+}
+
+  .btn:hover{
+  background-color: #FFFFFF;
+  color           : #000000;
+  }
+  .warn {
+background-color        : transparent;
+padding                 : 5px;
+font-weight             : lighter;
+text-align              : center;
+color                   : #000000;
+border-radius           : 5px;
+margin-bottom           : 10px;
+}
