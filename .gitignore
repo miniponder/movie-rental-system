@@ -13,4 +13,4 @@ db.sqlite3
 *.egg-info/
 .eggs/
 *.egg
-app/receipts
+app/receipts/
