@@ -3,12 +3,8 @@
 
 
 
-###### _this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him._
 
-
-
-
-as the title suggests, this is a web application for managing movie rentals, with support for user, staff, and manager roles, and email notifications.
+as the title suggests, this is a web application for managing movie rentals, with support for user, staff, and manager roles, and email notifications. there is also a recommender model.
 
 ### features include:
 - user authentication (signup, login, logout)
@@ -48,3 +44,7 @@ create is a `.env` file in the root dierectory to store sensitive information su
 ```
 python app.py
 ```
+
+###### _this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him._
+##### _i'm grateful to [sublime text](https://www.sublimetext.com/3) and eveyone who contributes to it in a meaningful way. they make my life much easier and pleasant._
+
