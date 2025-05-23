@@ -20,18 +20,18 @@ as the title suggests, this is a web application for managing movie rentals, wit
 ### setup instructions:
 
 #### 1. clone the repo
-'git clone https://github.com/yourusername/movie-rental-system.git'
-'cd movie-rental-flask'
+`git clone https://github.com/yourusername/movie-rental-system.git`
+`cd movie-rental-flask`
 
 #### 2. create and activate a virtual environment
-'python -m venv venv'
-'source venv/bin/activate'
+`python -m venv venv`
+`source venv/bin/activate`
 
 #### 3. install dependencies
-'pip install -r requirements.txt'
+`pip install -r requirements.txt`
 
 #### 4. configure environment variables
-this is a '.env' file where you store all the important safety-critical details such as email id, password, etc..
+this is a `.env` file where you store all the important safety-critical details such as email id, password, etc..
 
 #### 5. run the application
-'python app.py'
+`python app.py`
