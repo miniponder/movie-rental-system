@@ -46,5 +46,5 @@ python app.py
 ```
 
 ###### _this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him._
-##### _i'm grateful to [sublime text](https://www.sublimetext.com/3) and eveyone who contributes to it in a meaningful way. they make my life much easier and pleasant._
+###### _i'm grateful to [sublime text](https://www.sublimetext.com/3) and eveyone who contributes to it in a meaningful way. they make my life much easier and pleasant._
 
