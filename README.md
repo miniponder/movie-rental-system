@@ -1,6 +1,6 @@
 # movie-rental-system
 
-###### this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him.
+_this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him._
 
 
 as the title suggests, this is a web application for managing movie rentals, with support for user, staff, and manager roles, and email notifications.
