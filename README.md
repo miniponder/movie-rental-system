@@ -41,7 +41,7 @@ as the title suggests, this is a web application for managing movie rentals, wit
 #### 1. clone the repo
 ```
 git clone https://github.com/yourusername/movie-rental-system.git
-cd movie-rental-flask
+cd movie-rental-system
 ```
 
 #### 2. create and activate a virtual environment
