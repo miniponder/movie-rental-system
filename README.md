@@ -18,6 +18,24 @@ as the title suggests, this is a web application for managing movie rentals, wit
 - __database:__ sqlite
 - __email:__ smtp
 
+### screenshots:
+
+#### 1. login page
+![login](screenshots/login.png)
+#### 2. create account page
+![create account](screenshots/create-acc.png)
+#### 3. home page
+![home](screenshots/home.png)
+#### 4. view page
+![view](screenshots/view.png)
+#### 5. rentals page
+![rentals](screenshots/customer.png)
+#### 6. manager login page
+![manager login](screenshots/manager-login.png)
+#### 7. staff login page
+![staff login](screenshots/staff-login.png)
+
+
 ### setup instructions:
 
 #### 1. clone the repo
