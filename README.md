@@ -40,7 +40,7 @@ as the title suggests, this is a web application for managing movie rentals, wit
 
 #### 1. clone the repo
 ```
-git clone https://github.com/yourusername/movie-rental-system.git
+git clone https://github.com/miniponder/movie-rental-system.git
 cd movie-rental-system
 ```
 
