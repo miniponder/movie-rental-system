@@ -80,4 +80,3 @@ class Borrow(db.Model):
         self.movie_id = movie_id
         self.borrow_date = borrow_date or datetime.utcnow()
         self.deadline = deadline
-

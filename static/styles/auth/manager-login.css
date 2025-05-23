@@ -77,16 +77,16 @@ color           : white;
 text-align      : center;
 }
 
-  .btn:hover{
-  background-color: #FFFFFF;
-  color           : #000000;
-  }
-  .warn {
-background-color        : transparent;
-padding                 : 5px;
-font-weight             : lighter;
-text-align              : center;
-color                   : #000000;
-border-radius           : 5px;
-margin-bottom           : 10px;
+.btn:hover{
+background-color: #FFFFFF;
+color           : #000000;
+}
+.warn {
+background-color: transparent;
+padding         : 5px;
+font-weight     : lighter;
+text-align      : center;
+color           : #000000;
+border-radius   : 5px;
+margin-bottom   : 10px;
 }

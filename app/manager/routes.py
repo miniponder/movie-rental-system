@@ -101,3 +101,4 @@ def total_orders():
 
 def init_routes(app):
     app.register_blueprint(manager_bp)
+    

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>movies</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main/blank-search.css') }}">
+  <title>movies</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main/blank-search.css') }}">
   <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
 </head>
 {% block body %}
 <body>
-    <div class="header">
+  <div class="header">
     <div class="dropdown">
-    <button class="dropdown-item">menu ▼</button>
-    <div class="dropdown-content">
-      <a href="{{url_for('customer.customer')}}">check status</a>
-      <a href="{{url_for('auth.login')}}">logout</a>
+      <button class="dropdown-item">menu ▼</button>
+      <div class="dropdown-content">
+        <a href="{{url_for('customer.customer')}}">check status</a>
+        <a href="{{url_for('auth.login')}}">logout</a>
+      </div>
     </div>
+    <h1>enter a movie name ➡️ </h1>
+    <form action="/search" method="POST" class="search">
+      <input type="text" name="inp" placeholder="enter movie name">
+      <button type="submit">search</button>
+    </form>
   </div>
-  <h1>enter a movie name ➡️ </h1>
-  <form action="/search" method="POST" class="search">
-    <input type="text" name="inp" placeholder="enter movie name">
-    <button type="submit">search</button>
-  </form>
-</div>
 </body>
 {% endblock %}
 </html>

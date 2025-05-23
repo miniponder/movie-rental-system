@@ -87,15 +87,15 @@ font-size       : 15px;
 }
 
 .search button {
-    background-color: #000000;
-    color           : #FFFFFF;
-    border-radius   : 80px;
-    padding         : 10px 20px;
-    cursor          : pointer;
-    font-size       : 15px;
-    width           : 200px;
-    text-align      : center;
-    margin          : 10px 0;
+background-color: #000000;
+color           : #FFFFFF;
+border-radius   : 80px;
+padding         : 10px 20px;
+cursor          : pointer;
+font-size       : 15px;
+width           : 200px;
+text-align      : center;
+margin          : 10px 0;
 }
 
 .movie {

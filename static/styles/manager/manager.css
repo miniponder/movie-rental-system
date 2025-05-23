@@ -51,6 +51,7 @@ transform: translateX(-50%);
 .left {
 flex: 1;
 }
+
 .dropdown:hover .dropdown-content {
 display         : flex;
 flex-direction  : column;
@@ -79,7 +80,6 @@ box-sizing      : border-box;
 background-color: black;
 color           : white;
 }
-
 
 form {
 display       : flex;

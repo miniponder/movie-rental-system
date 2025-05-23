@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>my rentals</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/manager/total-orders.css')}}">
+<head>
+  <title>my rentals</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/manager/total-orders.css')}}">
   <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
-  </head>
+</head>
 
-  {% block body %}
-  <body>
-    <div class="header">
+{% block body %}
+<body>
+  <div class="header">
     <div class="left">
-<div class="dropdown">
-      <button class="dropdown-item">menu &#9662;</button>
-      <div class="dropdown-content">
-        <a href="{{url_for('manager.del_user')}}">delete users</a>
-        <a href="{{url_for('auth.login')}}">logout</a>
-      </div>
+      <div class="dropdown">
+        <button class="dropdown-item">menu &#9662;</button>
+        <div class="dropdown-content">
+          <a href="{{url_for('manager.del_user')}}">delete users</a>
+          <a href="{{url_for('auth.login')}}">logout</a>
+        </div>
       </div>
     </div>
     <div class="center">
       <h1>orders</h1>
     </div>
   </div>
-    <div class="movie-list">
-      {% for i in range(0, length) %}
-      <div class="movie">
-        <div class="movie-info">
-          <div class="movie-title">{{ id[i] }}.  {{titles[i]}}</div>
-          <div class="movie-deadline">{{uid[i]}} {{ uname[i] }}</div>
-          <div class="movie-deadline">rented on {{ borrow_date[i] }}</div>
-          <div class="movie-deadline">return by {{ deadline[i] }}</div>
-          </div>
-        </div>
-      {% endfor %}
+  <div class="movie-list">
+    {% for i in range(0, length) %}
+    <div class="movie">
+      <div class="movie-info">
+        <div class="movie-title">{{ id[i] }}.  {{titles[i]}}</div>
+        <div class="movie-deadline">{{uid[i]}} {{ uname[i] }}</div>
+        <div class="movie-deadline">rented on {{ borrow_date[i] }}</div>
+        <div class="movie-deadline">return by {{ deadline[i] }}</div>
       </div>
-  </body>
-  {% endblock %}
+    </div>
+    {% endfor %}
+  </div>
+</body>
+{% endblock %}
 </html>

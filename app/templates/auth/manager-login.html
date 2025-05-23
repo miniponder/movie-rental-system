@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>manager login - movie rental system</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/auth/manager-login.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/auth/manager-login.css') }}">
   <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
 </head>
 {% block body %}
 <body>
-<form action="/manager-login" method="POST">
-  <h2>manager login</h2>
-      {% if warn=="y" %}
-  <h4>invalid credentials</h4>
-  {% endif %}
-  <input type="password" id="password" name="password" placeholder="password" required>
-  <input type="submit" value="log in">
-  <a href="{{url_for('auth.login')}}" class="btn">user?</a>
-</form>
+  <form action="/manager-login" method="POST">
+    <h2>manager login</h2>
+    {% if warn=="y" %}
+    <h4>invalid credentials</h4>
+    {% endif %}
+    <input type="password" id="password" name="password" placeholder="password" required>
+    <input type="submit" value="log in">
+    <a href="{{url_for('auth.login')}}" class="btn">user?</a>
+  </form>
 </body>
 {% endblock %}
 </html>

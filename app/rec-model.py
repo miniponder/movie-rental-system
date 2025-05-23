@@ -83,7 +83,7 @@ class hybridRecommender:
         end_mem = self.df.memory_usage().sum() / 1024 ** 2
         if verbose:
             print(
-                "Mem. usage decreased to {:.2f} Mb ({:.1f}% reduction)".format(
+                "mem. usage decreased to {:.2f} Mb ({:.1f}% reduction)".format(
                     end_mem, 100 * (start_mem - end_mem) / start_mem
                 )
             )
@@ -101,12 +101,12 @@ class tfidRecommender:
 
     def calculate_cosine_sim(self):
         self.tfidf = TfidfVectorizer(stop_words='english')
-        print("Checkpoint 1: TfidVecorizer completion")
+        print("checkpoint 1: tfidvecorizer completion")
         self.df['overview'] = self.df['overview'].fillna('')
         self.tfidf_matrix = self.tfidf.fit_transform(self.df['overview'])
-        print("Checkpoint 2: Fitting and Transform completion")
+        print("checkpoint 2: fitting and transform completion")
         self.cosine_sim = cosine_similarity(self.tfidf_matrix, self.tfidf_matrix)
-        print("Checkpoint 3: Similarity completion")
+        print("checkpoint 3: similarity completion")
         print(self.cosine_sim)
 
     def content_based_recommender(self, title, cosine_sim = None):
@@ -160,7 +160,7 @@ class tfidRecommender:
         end_mem = self.df.memory_usage().sum() / 1024 ** 2
         if verbose:
             print(
-                "Mem. usage decreased to {:.2f} Mb ({:.1f}% reduction)".format(
+                "mem. usage decreased to {:.2f} Mb ({:.1f}% reduction)".format(
                     end_mem, 100 * (start_mem - end_mem) / start_mem
                 )
             )
@@ -170,7 +170,7 @@ class tfidRecommender:
 
 
 if __name__ == '__main__':
-    print("This is a Recommender model")
+    print("this is a recommender model")
 
     model_rec = tfidRecommender()
 
@@ -190,7 +190,7 @@ if __name__ == '__main__':
     with open(model_path, "wb") as file:
         pickle.dump(mod, file)
 
-    print("Model saved!")
+    print("model saved!")
 
-print("Model keys:", list(mod.keys())[:5])  # Show sample keys
-print("Model saved to:", os.path.abspath(model_path))
+print("model keys:", list(mod.keys())[:5])
+print("model saved to:", os.path.abspath(model_path))

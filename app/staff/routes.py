@@ -48,3 +48,4 @@ def sendmail():
 
 def init_routes(app):
     app.register_blueprint(staff_bp)
+    

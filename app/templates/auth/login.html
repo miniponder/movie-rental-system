@@ -8,20 +8,20 @@
 </head>
 {% block body %}
 <body>
-<h1>movie rental system</h1>
-<form action="/login" method="POST">
-  <h2>login</h2>
-  {% if warn=="y" %}
-  <div class="warn">invalid credentials :/</div>
-  {% endif %}
-  <input type="text" id="username" name="username" placeholder="username" required>
-  <input type="email" id="email" name="email" placeholder="email">
-  <input type="password" id="password" name="password" placeholder="password" required>
-  <input type="submit" name="action" value="log in">
+  <h1>movie rental system</h1>
+  <form action="/login" method="POST">
+    <h2>login</h2>
+    {% if warn=="y" %}
+    <div class="warn">invalid credentials :/</div>
+    {% endif %}
+    <input type="text" id="username" name="username" placeholder="username" required>
+    <input type="email" id="email" name="email" placeholder="email">
+    <input type="password" id="password" name="password" placeholder="password" required>
+    <input type="submit" name="action" value="log in">
     <a href="{{ url_for('customer.create_acc') }}" class="btn">create account</a>
     <a href="{{ url_for('auth.staff_login') }}" class="btn">staff?</a>
     <a href="{{ url_for('auth.manager_login') }}" class="btn-b">manager?</a>
-</form>
+  </form>
 </body>
 {% endblock %}
 </html>
