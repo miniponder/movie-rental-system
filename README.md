@@ -1,6 +1,6 @@
 # movie-rental-system
 
-_this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him._
+######_this project wouldn't have been possible without the help of [parthiv](https://github.com/blip100), my senior at college. so thanks to him._
 
 
 as the title suggests, this is a web application for managing movie rentals, with support for user, staff, and manager roles, and email notifications.
@@ -31,7 +31,7 @@ as the title suggests, this is a web application for managing movie rentals, wit
 `pip install -r requirements.txt`
 
 #### 4. configure environment variables
-this is a `.env` file where you store all the important safety-critical details such as email id, password, etc..
+create is a `.env` file in the root dierectory to store sensitive information such as email credentials, secret key, etc.
 
 #### 5. run the application
 `python app.py`
